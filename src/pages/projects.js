@@ -268,7 +268,7 @@ export default function Projects() {
                 date="2023"
                 link=""
                 demo="https://portfolio-jakeline-campos.vercel.app/"
-                github="https://github.com/sofiacoder3000/portfolio"
+                github="https://github.com/sofiacoder3000/my-portfolio"
               />
             </div>
             <div className="">
@@ -280,14 +280,14 @@ export default function Projects() {
                 date="2023"
                 link=""
                 demo="https://portfolio-jakeline-campos.vercel.app/"
-                github="https://github.com/sofiacoder3000/portfolio"
+                github="https://github.com/sofiacoder3000/my-portfolio"
               />
             </div>
             <div className="">
               <Project
                 type="Front End"
                 tools="HTML | CSS | JavaScript | ReactJS | WebPack"
-                title="Listas y Detalle de perfil"
+                title="Lists and Profile Detail"
                 img={listasYPerfiles}
                 date="2023"
                 link=""
@@ -299,7 +299,7 @@ export default function Projects() {
               <Project
                 type="Front End"
                 tools="HTML | CSS | JavaScript | NextJS | ReactJS | WebPack"
-                title="Blog básico"
+                title="Basic Blog"
                 img={blogPrueba}
                 date="2023"
                 link=""
