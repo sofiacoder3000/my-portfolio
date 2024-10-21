@@ -43,7 +43,7 @@ Framer Motion 11+
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:sofiacoder3000/portfolio.git
+   git clone https://github.com/sofiacoder3000/my-portfolio.git
    ```
 
 2. Navigate into the repository:
