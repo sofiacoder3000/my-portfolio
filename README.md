@@ -1,6 +1,6 @@
 # NexTemp | A Next.js Personal Web App
 
-![NexTemp - A Next.js Personal Web App](https://github.com/sofiacoder3000/portfolio/blob/main/public/NexTemp-cover.png)
+![NexTemp - A Next.js Personal Web App](https://github.com/sofiacoder3000/my-portfolio/blob/main/public/NexTemp-cover.png)
 
 NexTemp - A bespoke **template** for your **next** web project. NexTemp is a personal portfolio and blog theme built around Next.js. It features a modern, clean, and responsive design, perfect for developers or anyone looking to showcase their work and ideas. For more themes and updates, stay tuned.
 
