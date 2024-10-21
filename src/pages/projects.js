@@ -10,6 +10,7 @@ import { HireMe2 } from "@/components/HireMe2";
 import lightPortfolio from "../../public/images/projects/portfolio-light.png";
 import darkPortfolio from "../../public/images/projects/portfolio-dark.png";
 import listasYPerfiles from "../../public/images/projects/listas-y-perfiles.png";
+import blogPrueba from "../../public/images/projects/blog-prueba.png";
 
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
@@ -266,7 +267,7 @@ export default function Projects() {
                 img={lightPortfolio}
                 date="2023"
                 link=""
-                demo=""
+                demo="https://portfolio-jakeline-campos.vercel.app/"
                 github="https://github.com/sofiacoder3000/portfolio"
               />
             </div>
@@ -278,7 +279,7 @@ export default function Projects() {
                 img={darkPortfolio}
                 date="2023"
                 link=""
-                demo=""
+                demo="https://portfolio-jakeline-campos.vercel.app/"
                 github="https://github.com/sofiacoder3000/portfolio"
               />
             </div>
@@ -297,13 +298,13 @@ export default function Projects() {
             <div className="">
               <Project
                 type="Front End"
-                tools="HTML | CSS | JavaScript | ReactJS | WebPack"
-                title="Listas y Detalle de perfil"
-                img={listasYPerfiles}
+                tools="HTML | CSS | JavaScript | NextJS | ReactJS | WebPack"
+                title="Blog básico"
+                img={blogPrueba}
                 date="2023"
                 link=""
-                demo="https://dreamcode.vercel.app/"
-                github="https://github.com/sofiacoder3000/dreamcode-challenge"
+                demo="https://nextjs-blog-one-gilt.vercel.app/"
+                github="https://github.com/sofiacoder3000/nextjs-blog"
               />
             </div>
           </div>
