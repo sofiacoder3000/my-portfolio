@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(12 18 34 / var(--tw-bg-opacity)) !important;
+}
+
+.background-grid {
+  position: relative;
+  /* z-index: 1; */
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.background-grid--fade-out:before,
+.background-image--fade-out {
+  -webkit-mask-image: linear-gradient(#000, #000, transparent);
+  mask-image: linear-gradient(#000, #000, transparent);
+}
+
+.background-grid:before {
+  -webkit-mask-image: linear-gradient(transparent, #000, transparent);
+  mask-image: linear-gradient(transparent, #000, transparent);
+}
+
+.background-grid:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  --tw-content: "";
+  content: var(--tw-content);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(226 232 240 / 0.8)' stroke-dasharray='5 3' transform='scale(1%2c -1)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+.dark .dark\:border-divider-dark {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
+.dark .background-grid--fade-out {
+  background-color: transparent;
+  --tw-gradient-from: #0c1222;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgba(12, 18, 34, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #0c1222, var(--tw-gradient-to);
+}
+
+.dark .background-grid {
+  --tw-bg-opacity: 1;
+  background-color: rgb(12 18 34 / var(--tw-bg-opacity)) !important;
+}
+
+.dark .background-grid:before {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(248 250 252 / .025)' stroke-dasharray='5 3' transform='scale(1%2c -1)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+/* Projects and Articles image background black*/
+img.h-auto.w-full {
+  background: black !important;
+}
+img.w-full.max-h-80.object-cover {
+  background: black !important;
+}
+
+/* Profile image shadow*/
+img.h-auto.w-100 {
+  filter: drop-shadow(0 0 0.25rem black);
+}
+
+/* max width before main*/
+div#__next {
+  max-width: 1900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Homepage min Height */
+.min-h-screen {
+  min-height: 86vh;
+}
+
+/* Contact form outline */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* Projects and Articles image border black*/
+img.h-auto.w-full {
+  border-radius: 10px;
+}
