@@ -1,23 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "@components/Icons";
-const FramerImage = motion(Image);
+import IProject from "@/interfaces/project";
 
-export interface Project {
-  id: string;
-  title: string;
-  type: string;
-  imagen: StaticImageData;
-  date: string;
-  link: string;
-  tools: string;
-  demo: string;
-  github: string;
-}
-
-export const Project: React.FC<Project> = ({
+const Project: React.FC<IProject> = ({
   id,
   title,
   type,
@@ -28,6 +16,8 @@ export const Project: React.FC<Project> = ({
   demo,
   github
 }) => {
+  const FramerImage = motion(Image);
+
   return (
     <article
       className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl 
@@ -103,3 +93,5 @@ export const Project: React.FC<Project> = ({
     </article>
   );
 };
+
+export default Project;

@@ -3,7 +3,7 @@ import Head from "next/head";
 import Layout from "@components/Layout";
 import Link from "next/link";
 import TransitionEffect from "@components/TransitionEffect";
-import { HireMe2 } from "@components/HireMe2";
+import HireMe2 from "@components/HireMe2";
 
 export default function Articles() {
   return (

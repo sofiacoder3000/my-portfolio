@@ -1,21 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { GithubIcon } from "@components/Icons";
-const FramerImage = motion(Image);
 
-interface FeaturedProjectProps {
-  type: string;
-  title: string;
-  summary: string;
-  img: StaticImageData;
-  link: string;
-  github: string;
-  tools: string;
-}
-
-export const FeaturedProject: React.FC<FeaturedProjectProps> = ({
+export default function FeaturedProject({
   type,
   title,
   summary,
@@ -23,7 +12,9 @@ export const FeaturedProject: React.FC<FeaturedProjectProps> = ({
   link,
   github,
   tools
-}) => {
+}) {
+  const FramerImage = motion(Image);
+
   return (
     <article
       className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border
@@ -93,4 +84,6 @@ export const FeaturedProject: React.FC<FeaturedProjectProps> = ({
       </div>
     </article>
   );
-};
+}
+
+// export default FeaturedProject;

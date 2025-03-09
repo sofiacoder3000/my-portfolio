@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
-import { MovingImage } from "../pages/projects/components/MovingImage";
+import MovingImage from "./MovingImage";
 
 export const Article = ({
   image,

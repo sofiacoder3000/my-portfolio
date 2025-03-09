@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-const FramerImage = motion(Image);
 
 interface MovingImageProps {
   title: string;
@@ -10,11 +9,8 @@ interface MovingImageProps {
   link: string;
 }
 
-export const MovingImage: React.FC<MovingImageProps> = ({
-  title,
-  image,
-  link
-}) => {
+const MovingImage: React.FC<MovingImageProps> = ({ title, image, link }) => {
+  const FramerImage = motion(Image);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const imageRef = useRef(null);
@@ -59,3 +55,5 @@ export const MovingImage: React.FC<MovingImageProps> = ({
     </Link>
   );
 };
+
+export default MovingImage;

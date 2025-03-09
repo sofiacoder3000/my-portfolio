@@ -1,4 +1,4 @@
-import { HireMe } from "@components/HireMe";
+import HireMe from "@components/HireMe";
 import Layout from "@components/Layout";
 import Head from "next/head";
 import Image from "next/image";

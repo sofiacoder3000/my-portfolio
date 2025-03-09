@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import CText from "../../public/images/CircularText.png";
 
-export const HireMe = () => {
+const HireMe = () => {
   return (
     <div
       className="fixed left-4 bottom-4 flex flex-col items-center justify-center md:right-8 sm:right-0 
@@ -32,3 +32,5 @@ dark:hover:text-light dark:hover:border-light  md:w-12 md:h-12 md:text-[10px]
     </div>
   );
 };
+
+export default HireMe;

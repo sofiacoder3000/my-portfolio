@@ -34,7 +34,10 @@
     "src/components/Navbar.js",
     "src/components/SocialMedia.js",
     "src/components/Skills.js",
-    "src/components/TransitionEffect.js"
+    "src/components/TransitionEffect.js",
+    "src/components/FeaturedProject.js",
+    "src/components/Project.tsx",
+    "next-sitemap.config.js"
   ],
   "exclude": ["node_modules"]
 }
