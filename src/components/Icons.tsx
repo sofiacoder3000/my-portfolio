@@ -1,6 +1,10 @@
 import * as React from "react";
 
-export const GithubIcon = ({ className, ...rest }) => (
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+export const GithubIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -20,7 +24,7 @@ export const GithubIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const TwitterIcon = ({ className, ...rest }) => (
+export const TwitterIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -37,7 +41,7 @@ export const TwitterIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const LinkedInIcon = ({ className, ...rest }) => (
+export const LinkedInIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     viewBox="-2.4 -2.4 28.80 28.80"
     fill="none"
@@ -51,7 +55,7 @@ export const LinkedInIcon = ({ className, ...rest }) => (
         height="28.80"
         rx="14.4"
         fill="#f5f5f5"
-        strokewidth="0"
+        strokeWidth="0"
       ></rect>
     </g>
     <g
@@ -69,7 +73,7 @@ export const LinkedInIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const PinterestIcon = ({ className, ...rest }) => (
+export const PinterestIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -86,7 +90,7 @@ export const PinterestIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const DribbbleIcon = ({ className, ...rest }) => (
+export const DribbbleIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -107,7 +111,7 @@ export const DribbbleIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const SunIcon = ({ className, ...rest }) => (
+export const SunIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -285,7 +289,7 @@ export const SunIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const MoonIcon = ({ className, ...rest }) => (
+export const MoonIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -441,7 +445,7 @@ export const MoonIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const LinkArrow = ({ className, ...rest }) => (
+export const LinkArrow: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     width="1rem"
     height="1rem"
@@ -459,7 +463,7 @@ export const LinkArrow = ({ className, ...rest }) => (
         height="24.00"
         rx="12"
         fill="#f5f5f5"
-        strokewidth="0"
+        strokeWidth="0"
       ></rect>
     </g>
     <g
@@ -478,7 +482,7 @@ export const LinkArrow = ({ className, ...rest }) => (
     </g>
   </svg>
 );
-export const MediumIcon = ({ className, ...rest }) => (
+export const MediumIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     viewBox="-2.4 -2.4 28.80 28.80"
     fill="none"
@@ -492,7 +496,7 @@ export const MediumIcon = ({ className, ...rest }) => (
         height="28.80"
         rx="14.4"
         fill="#f5f5f5"
-        strokewidth="0"
+        strokeWidth="0"
       ></rect>
     </g>
     <g
@@ -512,7 +516,7 @@ export const MediumIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const DevIcon = ({ className, ...rest }) => (
+export const DevIcon: React.FC<IconProps> = ({ className, ...rest }) => (
   <svg
     fill="#000000"
     viewBox="-2.4 -2.4 28.80 28.80"
@@ -526,7 +530,7 @@ export const DevIcon = ({ className, ...rest }) => (
         height="28.80"
         rx="14.4"
         fill="#f5f5f5"
-        strokewidth="0"
+        strokeWidth="0"
       ></rect>
     </g>
     <g

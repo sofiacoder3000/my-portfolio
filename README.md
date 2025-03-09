@@ -9,7 +9,8 @@ NexTemp - A bespoke **template** for your **next** web project. NexTemp is a per
 Next.js 14+
 React 18+
 Tailwind CSS 3+
-Framer Motion 11+
+Nest JS
+React Native
 
 ## ✨ Features
 

@@ -3,29 +3,29 @@ import React from "react";
 
 const quote = {
   hidden: {
-    opacity: 1,
+    opacity: 1
   },
   visible: {
     opacity: 1,
     transition: {
       delay: 0.5,
-      staggerChildren: 0.08,
-    },
-  },
+      staggerChildren: 0.08
+    }
+  }
 };
 
 const singleWord = {
   hidden: {
     opacity: 0,
-    y: 50,
+    y: 50
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
-    },
-  },
+      duration: 1
+    }
+  }
 };
 
 const AnimatedText = ({ text, className = "" }) => {
@@ -35,8 +35,7 @@ const AnimatedText = ({ text, className = "" }) => {
     overflow-hidden sm:py-0"
     >
       <motion.h1
-        className={`inline-block text-dark dark:text-light
-      text-8xl font-bold w-full capitalize  ${className} xl:text-6xl`}
+        className={`inline-block text-dark dark:text-light text-8xl font-bold w-full capitalize  ${className} xl:text-6xl`}
         variants={quote}
         initial="hidden"
         animate="visible"

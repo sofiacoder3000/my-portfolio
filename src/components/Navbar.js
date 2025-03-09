@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "./Logo";
+import Logo from "@components/Logo";
 import { useRouter } from "next/router";
 import {
   MediumIcon,
@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   MoonIcon,
   SunIcon
-} from "./Icons";
+} from "@components/Icons";
 import { motion } from "framer-motion";
 import { useThemeSwitch } from "./Hooks/useThemeSwitch";
 

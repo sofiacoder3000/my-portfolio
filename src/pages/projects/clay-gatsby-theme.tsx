@@ -1,15 +1,13 @@
-import Layout from "@/components/Layout";
+import Layout from "@components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
-import AnimatedText from "@/components/AnimatedText";
-import TransitionEffect from "@/components/TransitionEffect";
-import { GithubIcon } from "@/components/Icons";
-import { DevIcon } from "@/components/Icons";
-
-import proj1 from "/public/images/projects/clay-theme.png";
+import AnimatedText from "@components/AnimatedText";
+import TransitionEffect from "@components/TransitionEffect";
+import { GithubIcon, DevIcon } from "@components/Icons";
+import proj1 from "@images/projects/clay-theme.png";
 
 function AnimatedNumberFramerMotion({ value }) {
   const ref = useRef(null);
@@ -73,7 +71,7 @@ export default function About() {
               <h3 className="mb-4 text-lg font-bold  text-lightGreen dark:text-primaryDark">
                 Content | Web Design | UX/UI | Development
               </h3>
-              <div classNname="w-full border-2 border-solid border-light bg-light"></div>
+              <div className="w-full border-2 border-solid border-light bg-light"></div>
               <p className="">
                 I am thrilled to share some exciting news with the web
                 development community! I have recently launched a cutting-edge

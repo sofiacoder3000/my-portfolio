@@ -1,11 +1,10 @@
-import AnimatedText from "@/components/AnimatedText";
-import { HireMe } from "@/components/HireMe";
-import Layout from "@/components/Layout";
+import { HireMe } from "@components/HireMe";
+import Layout from "@components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import TransitionEffect from "@/components/TransitionEffect";
-import SectionSocialMedia from "@/components/SocialMedia";
+import TransitionEffect from "@components/TransitionEffect";
+import SectionSocialMedia from "@components/SocialMedia";
 import profilePicture from "@images/profile/developer.png";
 import LoveYouGesture from "@images/love-you-gesture.webp";
 
@@ -84,11 +83,11 @@ export default function Home() {
     overflow-hidden sm:py-0"
               >
                 <span
-                  class="!text-left !text-6xl xl:!text-5xl lg:!text-center !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                  className="!text-left !text-6xl xl:!text-5xl lg:!text-center !text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl"
                   // style="opacity: 1; transform: none;"
                 >
                   I'm{" "}
-                  <strong class="text-indigo-600 dark:text-indigo-500">
+                  <strong className="text-indigo-600 dark:text-indigo-500">
                     Jakeline
                   </strong>{" "}
                   Campos,{" "}
@@ -101,8 +100,8 @@ export default function Home() {
               /> */}
               <div className="flex w-1/2 w-full items-center items-start lg:w-full  lg:!justify-center  sm:!justify-center  md:!text-center md:inline-block md:w-full">
                 <h1 className="my-4 text-base font-light md:text-sm sm:!text-sm">
-                  <span class="lowercase">A</span>{" "}
-                  <strong class="font-bold lowercase text-slate-700 dark:text-slate-300">
+                  <span className="lowercase">A</span>{" "}
+                  <strong className="font-bold lowercase text-slate-700 dark:text-slate-300">
                     Software Engineer,
                   </strong>{" "}
                   backend developer senior in Node JS, who loves programming

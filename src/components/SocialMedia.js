@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import { MediumIcon, DevIcon, GithubIcon, LinkedInIcon } from "./Icons";
+import {
+  MediumIcon,
+  DevIcon,
+  GithubIcon,
+  LinkedInIcon
+} from "@components/Icons";
 
 const SectionSocialMedia = () => {
   return (

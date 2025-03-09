@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@images/*": ["./public/images/*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "new-types.d.ts",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/Experience.js",
+    "src/components/FeaturedArticle.js",
+    "src/components/Article.js",
+    "src/components/AnimatedText.js",
+    "next.config.ts",
+    "src/components/Navbar.js",
+    "src/components/SocialMedia.js",
+    "src/components/Skills.js",
+    "src/components/TransitionEffect.js"
+  ],
+  "exclude": ["node_modules"]
+}

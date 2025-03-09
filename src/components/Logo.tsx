@@ -7,7 +7,11 @@ import logoLight from "@images/logo-light.png";
 
 let MotionLink = motion(Link);
 
-const Logo = ({ mode }) => {
+interface LogoProps {
+  mode: string;
+}
+
+const Logo: React.FC<LogoProps> = ({ mode }) => {
   return (
     <div className="flex flex-col items-center justify-center mt-2">
       <MotionLink

@@ -1,46 +1,36 @@
-import { useState } from "react";
-import Layout from "@/components/Layout";
+import { ChangeEvent, FormEvent, useState } from "react";
+import Layout from "@components/Layout";
 import Head from "next/head";
-import AnimatedText from "@/components/AnimatedText";
-import TransitionEffect from "@/components/TransitionEffect";
+import AnimatedText from "@components/AnimatedText";
+import TransitionEffect from "@components/TransitionEffect";
 import { useRouter } from "next/router";
-
-// Netlify Form config
 
 export default function About() {
   const router = useRouter();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Record<string, string>>({
     name: "",
     email: "",
     message: ""
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const myForm = e.target;
-    const formData = new FormData(myForm);
     try {
       const response = await fetch("/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
       });
 
-      if (response.ok) {
-        // Handle success, e.g., redirect to a thank you page
-        router.push("/thanks");
-      } else {
-        // Handle error
-        console.error("Form submission failed!", response);
-      }
+      if (response.ok) router.push("/thanks");
+      else console.error("Form submission failed!", response);
     } catch (error) {
-      // Handle error
       console.error("An error occurred during form submission:", error);
     }
   };
@@ -136,10 +126,10 @@ I'm One Message Away 👋"
                           name="message"
                           id="message"
                           required
-                          rows="4"
+                          rows={4}
                           className="mt-1 p-2 w-full border border-solid border-dark rounded-md bg-light dark:border-light dark:bg-dark dark:text-light"
                           onChange={handleChange}
-                        ></textarea>
+                        />
                       </label>
                     </div>
 
