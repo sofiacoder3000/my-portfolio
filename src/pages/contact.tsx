@@ -3,15 +3,23 @@ import Layout from "@components/Layout";
 import Head from "next/head";
 import AnimatedText from "@components/AnimatedText";
 import TransitionEffect from "@components/TransitionEffect";
-import { useRouter } from "next/router";
+
+const whatsappPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE?.replace(
+  /\D/g,
+  ""
+);
+const myEmail = process.env.NEXT_PUBLIC_MY_EMAIL?.trim();
 
 export default function About() {
-  const router = useRouter();
   const [formData, setFormData] = useState<Record<string, string>>({
     name: "",
     email: "",
     message: ""
   });
+  const message = formData.message.trim();
+  const whatsappUrl = whatsappPhone
+    ? `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message !== "" ? message : "Hello, I'm coming from your portfolio website.")}`
+    : undefined;
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,30 +27,21 @@ export default function About() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      });
+    const message = `Portfolio Contact\nName: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
+    const destination = `mailto:${myEmail}?subject=${encodeURIComponent(
+      `Portfolio contact from ${formData.name}`
+    )}&body=${encodeURIComponent(message)}`;
 
-      if (response.ok) router.push("/thanks");
-      else console.error("Form submission failed!", response);
-    } catch (error) {
-      console.error("An error occurred during form submission:", error);
-    }
+    window.location.href = destination;
   };
 
   return (
     <>
       <Head>
-        <title>NexTemp Built with Nextjs</title>
-        <meta
-          name="description"
-          content="NexTemp, A open-source portfolio theme built with Nextjs"
-        />
+        <title>Contact | My Portfolio</title>
+        <meta name="description" content="My Portfolio, Get in touch with me" />
       </Head>
 
       <TransitionEffect />
@@ -72,22 +71,7 @@ I'm One Message Away 👋"
             <div className="relative h-max md:order-2">
               <div className="grid w-full grid-cols-2 sm:gap-6 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl bg-light p-6 dark:bg-dark xs:p-4 shadow-2xl">
                 <div className="col-span-8 h-max xl:col-span-6 md:col-span-8 md:order-2">
-                  <form
-                    name="contact-form"
-                    method="POST"
-                    onSubmit={handleSubmit}
-                  >
-                    <input
-                      type="hidden"
-                      name="form-name"
-                      value="contact-form"
-                    />
-                    <p className="hidden">
-                      <label>
-                        Name
-                        <input name="bot-field" />
-                      </label>
-                    </p>
+                  <form name="contact-form" onSubmit={handleSubmit}>
                     <div className="col-span-1 p-2">
                       <label className="block text-sm font-medium text-dark dark:text-light">
                         Your Name:
@@ -138,10 +122,41 @@ I'm One Message Away 👋"
                         type="submit"
                         className="px-4 py-2 font-bold capitalize text-light bg-dark border border-2 border-solid border-dark dark:border-light dark:bg-light rounded-md hover:bg-transparent hover:text-dark dark:hover:text-light dark:hover:bg-dark dark:hover:border-light dark:hover:bg-dark dark:text-dark dark:hover:text-light"
                       >
-                        Send it!
+                        Open email draft
                       </button>
                     </div>
                   </form>
+
+                  <div
+                    className="my-2 flex items-center gap-3 px-2"
+                    aria-hidden="true"
+                  >
+                    <span className="h-px flex-1 bg-dark/20 dark:bg-light/20" />
+                    <span className="text-sm text-dark/60 dark:text-light/60">
+                      OR
+                    </span>
+                    <span className="h-px flex-1 bg-dark/20 dark:bg-light/20" />
+                  </div>
+                  <div className="p-2">
+                    {whatsappUrl ? (
+                      <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block rounded-md border-2 border-green-600 bg-green-600 px-4 py-2 font-bold text-white hover:bg-transparent hover:text-green-700"
+                      >
+                        Contact via WhatsApp
+                      </a>
+                    ) : (
+                      <button
+                        type="button"
+                        disabled
+                        className="rounded-md border-2 border-green-600 bg-green-600 px-4 py-2 font-bold text-white opacity-50"
+                      >
+                        Contact via WhatsApp
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
