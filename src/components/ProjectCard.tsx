@@ -63,12 +63,12 @@ const ProjectCard: React.FC<IProject> = ({
       </Link>
       <div className="mt-4 flex w-full flex-1 flex-col items-start justify-between gap-y-4">
         <div>
-          <span className="text-xs font-light text-primary dark:text-light lg:text-lg md:text-base">
+          <p className="text-xs font-light text-primary dark:text-light lg:text-lg md:text-base">
             {type}
-          </span>
-          <span className="text-l font-medium text-primaryDark dark:text-primaryDark xs:text-base">
+          </p>
+          <p className="text-l font-medium text-primaryDark dark:text-primaryDark xs:text-base">
             {tools}
-          </span>
+          </p>
 
           {/* <Link href={link} className="underline-offset-2 hover:underline"> */}
           <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-2xl">
@@ -78,8 +78,8 @@ const ProjectCard: React.FC<IProject> = ({
 
         {/* </Link> */}
         <div
-          className={`flex w-full items-center  ${
-            hasDemo ? "justify-between" : "justify-end"
+          className={`flex w-full items-center gap-x-2 ${
+            demo !== "" ? "justify-between" : "justify-end"
           }`}
         >
           {!!demo && (

@@ -50,7 +50,7 @@ React Native
 2. Navigate into the repository:
 
    ```bash
-   cd NexTemp
+   cd my-portfolio
    ```
 
 3. Install the dependencies:
