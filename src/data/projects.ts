@@ -16,7 +16,7 @@ export const PROJECTS_DATA: IProject[] = [
     title: "Impostor Game App",
     imagen: impostorGameApp,
     date: "2026",
-    link: "",
+    link: "https://apps.apple.com/es/app/el-impostor-juego-palabras/id6758422236",
     demo:"",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.qorilabs.impostorgame&hl=es",
     appleStoreUrl: "https://apps.apple.com/us/app/the-impostor-word-game/id6758422236",

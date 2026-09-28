@@ -76,9 +76,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="background-grid background-grid--fade-out w-full flex items-center justify-between px-56 pt-10 pb-8 font-medium dark:text-light
-    xl:px-24 lg:px-16 relative z-10 md:px-12 sm:px-8
-    "
+      className="background-grid background-grid--fade-out w-full flex items-center justify-between px-56 pt-10 pb-8 font-medium dark:text-light xl:px-24 lg:px-16 relative md:px-12 sm:px-8"
     >
       <button
         type="button"
@@ -297,7 +295,7 @@ const Navbar = () => {
         </motion.div>
       ) : null}
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
+      <div className="absolute left-[50%] top-2 translate-x-[-50%] z-10">
         <Logo mode={mode} />
       </div>
     </header>

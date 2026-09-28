@@ -35,7 +35,7 @@ const ProjectCard: React.FC<IProject> = ({
 
   return (
     <article
-      className="relative flex w-full flex-col items-center rounded-2xl  rounded-br-2xl 
+      className="relative flex h-full w-full flex-col items-center rounded-2xl  rounded-br-2xl 
         border-dark bg-light p-6  shadow-2xl dark:border-light dark:bg-slate-800
         xs:p-4"
     >
@@ -46,7 +46,8 @@ const ProjectCard: React.FC<IProject> = ({
         /> */}
 
       <Link
-        href={demo}
+        href={demo !== "" ? demo : link}
+        target={"_blank"}
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
         <FramerImage
@@ -60,18 +61,20 @@ const ProjectCard: React.FC<IProject> = ({
                 33vw"
         />
       </Link>
-      <div className="mt-4 flex w-full flex-col items-start justify-between gap-y-4">
-        <span className="text-xs font-light text-primary dark:text-light lg:text-lg md:text-base">
-          {type}
-        </span>
-        <span className="text-l font-medium text-primaryDark dark:text-primaryDark xs:text-base">
-          {tools}
-        </span>
+      <div className="mt-4 flex w-full flex-1 flex-col items-start justify-between gap-y-4">
+        <div>
+          <span className="text-xs font-light text-primary dark:text-light lg:text-lg md:text-base">
+            {type}
+          </span>
+          <span className="text-l font-medium text-primaryDark dark:text-primaryDark xs:text-base">
+            {tools}
+          </span>
 
-        {/* <Link href={link} className="underline-offset-2 hover:underline"> */}
-        <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-2xl">
-          {title}
-        </h2>
+          {/* <Link href={link} className="underline-offset-2 hover:underline"> */}
+          <h2 className="my-2 w-full text-left text-2xl font-bold lg:text-2xl">
+            {title}
+          </h2>
+        </div>
 
         {/* </Link> */}
         <div
@@ -98,29 +101,28 @@ const ProjectCard: React.FC<IProject> = ({
             <Link
               href={playStoreUrl}
               target={"_blank"}
-              className="p-2 rounded-full border-2 border-solid border-dark dark:border-light bg-transparent hover:bg- dark:bg-transparent dark:hover:bg-dark md:p-2 md:p-4"
+              className="p-2 rounded-full border-2 border-solid hover:transition hover:duration-200 hover:transform hover:scale-105 border-dark dark:border-light bg-transparent hover:bg- dark:bg-transparent dark:hover:bg-dark md:p-2 md:p-4"
               aria-label="play store link"
             >
               {" "}
-              <GooglePlayIcon className="w-7" />
+              <GooglePlayIcon className="w-6" />
             </Link>
           )}
           {!!appleStoreUrl && (
             <Link
               href={appleStoreUrl}
               target={"_blank"}
-              className="p-2 rounded-full border-2 border-solid border-dark dark:border-light bg-transparent hover:bg- dark:bg-transparent dark:hover:bg-dark md:p-2 md:p-4"
+              className="p-2 rounded-full border-2 border-solid hover:transition hover:duration-200 hover:transform hover:scale-105 border-dark dark:border-light bg-transparent hover:bg- dark:bg-transparent dark:hover:bg-dark md:p-2 md:p-4"
               aria-label="app store link"
             >
-              {" "}
-              <AppleStoreIcon className="w-8" />
+              <AppleStoreIcon className="w-6" />
             </Link>
           )}
           {!!github && (
             <Link
               href={github}
               target={"_blank"}
-              className="w-8"
+              className="w-8 hover:transition hover:duration-200 hover:transform hover:scale-105"
               aria-label="github link"
             >
               {" "}

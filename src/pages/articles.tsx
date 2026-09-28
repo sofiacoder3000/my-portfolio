@@ -9,10 +9,10 @@ export default function Articles() {
   return (
     <>
       <Head>
-        <title>Development Articles</title>
+        <title>Development Articles | My Portfolio</title>
         <meta
           name="description"
-          content="NexTemp, A open-source portfolio theme built with Nextjs"
+          content="My Portfolio, A collection of my development articles"
         />
       </Head>
       <TransitionEffect />

@@ -7,7 +7,7 @@ const HireMe2 = () => {
   return (
     <div
       className="fixed left-2 bottom-4 flex flex-col items-center justify-center md:right-8 sm:right-0 
-    overflow-hidden md:bottom-auto md:left-auto md:top-0 md:absolute"
+    overflow-hidden md:bottom-auto md:left-auto md:top-1 md:absolute z-100"
     >
       <div className="HireMe max-w-sm h-full flex items-center justify-center md:w-24">
         <Image
