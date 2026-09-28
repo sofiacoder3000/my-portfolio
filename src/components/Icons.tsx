@@ -543,3 +543,45 @@ export const DevIcon: React.FC<IconProps> = ({ className, ...rest }) => (
     </g>
   </svg>
 );
+
+export const GooglePlayIcon: React.FC<IconProps> = ({ className, ...rest }) => (
+  <svg
+    viewBox="0 0 32 32"
+    fill="none"
+    {...rest}
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g data-name="Capa 1">
+      <path
+        d="M13.54 15.28.12 29.34a3.64 3.64 0 0 0 5.33 2.16l15.1-8.6z"
+        fill="#ea4335"
+      />
+      <path
+        d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.55 3.55 0 0 0 0-6.29z"
+        fill="#fbbc04"
+      />
+      <path
+        d="M.12 2.66a3.46 3.46 0 0 0-.12.92v24.84a3.66 3.66 0 0 0 .12.92L14 15.64Z"
+        fill="#4285f4"
+      />
+      <path
+        d="m13.64 16 6.94-6.85L5.5.51A3.72 3.72 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z"
+        fill="#34a853"
+      />
+    </g>
+  </svg>
+);
+
+export const AppleStoreIcon: React.FC<IconProps> = ({ className, ...rest }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor" // Permite heredar el color del texto
+    {...rest}
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Path oficial del logo de Apple */}
+    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-.96.04-2.13.64-2.82 1.45-.6.7-1.13 1.84-.99 2.94 1.07.08 2.16-.52 2.82-1.33z" />
+  </svg>
+);

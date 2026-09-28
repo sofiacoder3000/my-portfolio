@@ -9,7 +9,9 @@ interface IProject {
   link: string;
   tools: string;
   demo: string;
-  github: string;
+  playStoreUrl?: string;
+  appleStoreUrl?: string;
+  github?: string;
 }
 
 export default IProject;
